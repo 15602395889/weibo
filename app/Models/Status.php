@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Status extends Authenticatable
+class Status extends Model
 {
     use HasFactory;
 
@@ -14,8 +14,4 @@ class Status extends Authenticatable
         return $this->belongsTo(User::class);
     }
 
-    public function statuses()
-    {
-        return $this->hasMany(Status::class);
-    }
 }
